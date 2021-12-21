@@ -1,7 +1,5 @@
 import RPi.GPIO as GPIO
-import time
 import pygame
-import os
 import numpy as np
 
 moon = "spacesweep.flac"
@@ -16,10 +14,10 @@ player = pygame.mixer.music
 
 player.set_volume(0.5)
 
+# set up GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(26, GPIO.IN)
-GPIO.setup(19, GPIO.IN)
 GPIO.setup(23, GPIO.IN)
 
 while True:
